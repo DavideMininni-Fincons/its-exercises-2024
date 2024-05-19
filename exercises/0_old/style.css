@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    color: white;
+    height: 10vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    color: white;
+    height: 70vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    height: 20vh;
+}

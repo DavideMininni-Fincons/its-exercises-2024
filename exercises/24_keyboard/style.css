@@ -1,0 +1,13 @@
+#draggable {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: grab;
+}
+.hidden {
+    display: none;
+}
