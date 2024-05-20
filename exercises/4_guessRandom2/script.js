@@ -1,5 +1,8 @@
-let attempts = 0, min = 1, max = 100;
-const randomNumber = /*Math.floor(Math.random() * (max - min + 1)) + min*/ 2;
+let attempts = 1, min = 1, max = 100;
+const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+alert(randomNumber);
+
+let guess;
 
 // Check if the guess is correct
 do {
