@@ -11,25 +11,34 @@ dropdownOptions.addEventListener('click', (e) => {
     if (e.target.tagName !== 'LI') {
         return;
     }
-    const sel = document.createElement('div');
-    sel.innerText = e.target.innerText
-    selected.append(sel);
-    toggleDisplay();
+    selectElement(e);
 });
 
 dropdownButton.addEventListener('keyup', (e) => {
+    const focused = Array.from(options).findIndex(e => e.classList.contains('focused'));
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-        const focused = Array.from(options).findIndex(e => e.classList.contains('focused'));
-        if (focused === -1 || focused === options.length - 1) {
+        if (focused === -1) {
             options[0].classList.add('focused');
             options[options.length - 1].classList.remove('focused');
         } else {
             options[focused].classList.remove('focused');
-            const next = e.key === 'ArrowDown' ? +1 : -1;
-            options[focused + next].classList.add('focused');
+            let next;
+            if (e.key === 'ArrowDown') {
+                next = focused === options.length - 1 ? 0 : focused + 1;
+            } else {
+                next = focused === 0 ? options.length - 1 : focused - 1;
+            }
+            options[next].classList.add('focused');
         }
     }
 });
+
+function selectElement(e) {
+    const sel = document.createElement('div');
+    sel.innerText = e.target.innerText
+    selected.append(sel);
+    toggleDisplay();
+}
 
 function toggleDisplay() {
     dropdownOptions.classList.toggle('show-panel');
