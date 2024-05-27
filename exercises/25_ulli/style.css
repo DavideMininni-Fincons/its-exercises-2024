@@ -1,45 +1,6 @@
-body {
-    padding: 2rem;
-    display: flex;
-    gap: 2rem;
+.selected {
+    background-color: green;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-button {
-    background-color: floralwhite;
-    color: black;
-    padding: 10px;
-    border: 1px solid gray;
-    cursor: pointer;
-    width: 120px;
-}
-.dropdown-options {
-    display: none;
-    position: absolute;
-    background-color: lightblue;
-    min-width: 120px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    z-index: 1;
-    border: 1px solid gray;
-}
-.dropdown-option {
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.show-panel {
-    display: block;
-}
-.selectedElement {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.focused {
-    outline: 1px solid gray;
-    outline-offset: -5px;
+.enter {
+    background-color: lightgreen;
 }
